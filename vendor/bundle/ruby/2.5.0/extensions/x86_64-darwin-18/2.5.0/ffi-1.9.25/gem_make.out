@@ -1,0 +1,22 @@
+current directory: /Users/student/Dropbox/LUCYLAND/Coding Lucy/MAKERS/Makers_Onsite/Week8/acebook-off-the-rails/vendor/bundle/ruby/2.5.0/gems/ffi-1.9.25/ext/ffi_c
+/Users/student/.rvm/rubies/ruby-2.5.0/bin/ruby -I /Users/student/.rvm/rubies/ruby-2.5.0/lib/ruby/site_ruby/2.5.0 -r ./siteconf20190716-68928-1a11tvk.rb extconf.rb
+checking for ffi.h... no
+checking for ffi.h in /usr/local/include,/usr/include/ffi... no
+checking for shlwapi.h... no
+checking for ruby/thread.h... yes
+checking for rb_thread_blocking_region()... no
+checking for rb_thread_call_with_gvl()... yes
+checking for rb_thread_call_without_gvl()... yes
+creating extconf.h
+creating Makefile
+
+current directory: /Users/student/Dropbox/LUCYLAND/Coding Lucy/MAKERS/Makers_Onsite/Week8/acebook-off-the-rails/vendor/bundle/ruby/2.5.0/gems/ffi-1.9.25/ext/ffi_c
+make "DESTDIR=" clean
+
+current directory: /Users/student/Dropbox/LUCYLAND/Coding Lucy/MAKERS/Makers_Onsite/Week8/acebook-off-the-rails/vendor/bundle/ruby/2.5.0/gems/ffi-1.9.25/ext/ffi_c
+make "DESTDIR="
+/bin/sh: -c: line 0: unexpected EOF while looking for matching `"'
+/bin/sh: -c: line 1: syntax error: unexpected end of file
+make: *** ["/Users/student/Dropbox/LUCYLAND/Coding] Error 2
+
+make failed, exit code 2
