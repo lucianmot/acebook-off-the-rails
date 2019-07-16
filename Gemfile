@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 # Creates travis CI run test before merging
-gem 'travis'
+gem 'travis', '~> 1.8.10'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.1'
 # Use postgresql as the database for Active Record
