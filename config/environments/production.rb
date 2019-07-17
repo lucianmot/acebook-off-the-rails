@@ -88,4 +88,6 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+  # devise requires this or maybe https://acebook-off-the-rails.herokuapp.com/
+  config.action_mailer.default_url_options = { host: 'acebook-off-the-rails.herokuapp.com' }
 end

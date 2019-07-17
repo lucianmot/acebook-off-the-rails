@@ -5,6 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+# Creates user login and sign up
+gem 'devise'
 # Creates travis CI run test before merging
 gem 'travis', '~> 1.8.10'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
