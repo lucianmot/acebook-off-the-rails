@@ -17,9 +17,4 @@ RSpec.feature "Timeline", type: :feature do
     click_button "Submit"
     expect(page).to have_content("Hello, world!")
   end
-
-  scenario "Is redirected if not logged in" do
-    visit "/posts"
-    expect(page).to have_content("Log in")
-  end
 end
