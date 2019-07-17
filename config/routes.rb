@@ -4,5 +4,5 @@ Rails.application.routes.draw do
 
   resources :posts
   #setup for devise we should update this when we have a user#index
-  root "posts#index"
+  root "root#index"
 end
