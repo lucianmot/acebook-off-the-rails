@@ -1,5 +1,9 @@
 # AceBook
 
+## Meet the Team
+
+![Team Off-the-Rails](https://drive.google.com/file/d/1gp8Ccnducf7iEVhL9onwKO8oql21EWP4/view?usp=sharing)
+
 REQUIRED INSTRUCTIONS:
 
 1. Fork this repository to `acebook-teamname` and customize
