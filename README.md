@@ -1,22 +1,12 @@
 # AceBook
 
+This project is a Ruby on Rails social message posting application. It is one of the Makers Academy engineering projects.
+
 ## Meet the Team
 
 ![Team Off-the-Rails](team-otr.jpg)
 
-REQUIRED INSTRUCTIONS:
-
-1. Fork this repository to `acebook-teamname` and customize
-the below**
-
-[You can find the engineering project outline here.](https://github.com/makersacademy/course/tree/master/engineering_projects/rails)
-
-2. The card wall is here: <please update>
-
-## How to contribute to this project
-See [CONTRIBUTING.md](CONTRIBUTING.md)
-
-## Quickstart
+## How to Install
 
 First, clone this repository. Then:
 
@@ -28,3 +18,21 @@ First, clone this repository. Then:
 > bundle exec rspec # Run the tests to ensure it works
 > bin/rails server # Start the server at localhost:3000
 ```
+
+## How to Test
+
+Navigate to the root of the project then run the tests from the command line
+
+```console
+admin$ rspec
+```
+
+## Project Kanban Board
+
+https://trello.com/b/voEAOwPH/off-the-rails-taskboard
+
+## Technology Used
+
+* Ruby on Rails - Web Application Framework
+* Devise - User Authentication
+
