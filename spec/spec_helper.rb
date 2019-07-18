@@ -1,4 +1,5 @@
 require 'simplecov'
+require 'features/web_helpers'
 
 SimpleCov.start 'rails' do
   add_filter '/bin/'
