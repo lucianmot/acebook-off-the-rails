@@ -493,7 +493,7 @@ Style/ExpandPathArguments:
   Enabled: false
 Style/MixinUsage:
   Enabled: false
-Style/StderrPuts:
-  Enabled: false
 Style/NumericLiterals:
+  Enabled: false
+Style/StderrPuts:
   Enabled: false
