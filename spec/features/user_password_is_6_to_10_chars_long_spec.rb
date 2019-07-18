@@ -10,6 +10,7 @@ RSpec.feature "Sign-up password", type: :feature do
     expect(current_path).to eq("/users")
     expect(page).to have_content("Password is too short (minimum is 6 characters)")
   end
+  
   scenario "User password is more than 10 characters" do
     visit "/users/sign_up"
     fill_in "user_email", with: "example@gmail.com"
@@ -29,9 +30,18 @@ RSpec.feature "Sign-up password", type: :feature do
     expect(current_path).to eq("/")
     expect(page).to have_content("Welcome! You have signed up successfully.")
   end
+
+  scenario "User password field is empty" do
+    visit "/users/sign_up"
+    fill_in "user_email", with: "example@gmail.com"
+    click_button "Sign up"
+    expect(current_path).to eq("/users")
+    expect(page).to have_content("Password can't be blank")
+  end
 end
+# testing password that is too short +
 # testing password that is too long +
 # testing when password is correct length, user is signed up +
+# tesing no password typed in - right error message received +
 # testing the right error message when the password confirmation not filled in
-# tesing no password typed in - right error message received
 # testing not matching passwords
