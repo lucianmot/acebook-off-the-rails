@@ -2,7 +2,7 @@
 
 ## Meet the Team
 
-![Team Off-the-Rails](https://drive.google.com/file/d/1gp8Ccnducf7iEVhL9onwKO8oql21EWP4/view?usp=sharing)
+![Team Off-the-Rails](team-otr.jpg)
 
 REQUIRED INSTRUCTIONS:
 
