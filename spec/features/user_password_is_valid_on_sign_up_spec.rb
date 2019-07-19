@@ -52,7 +52,7 @@ RSpec.feature "Sign-up password", type: :feature do
     visit "users/sign_up"
     fill_in "user_email", with: "example@gmail.com"
     fill_in "user_password", with: "1234567"
-    fill_in "user_password", with: "12345678"
+    fill_in "user_password_confirmation", with: "12345678"
     click_button "Sign up"
     expect(current_path).to eq("/users")
     expect(page).to have_content("Password confirmation doesn't match Password")

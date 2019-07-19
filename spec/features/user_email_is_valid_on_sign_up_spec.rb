@@ -12,7 +12,7 @@ RSpec.feature "Sign-up email", type: :feature do
   end
 
   scenario "User email is unique" do
-    sign_up
+    sign_up("user@gmail.com", "123456")
     click_link "Sign out"
     click_button "Sign up"
     fill_in("Email", :with => "user@gmail.com")
