@@ -1,5 +1,10 @@
 <h1> Welcome to Acebook </h1>
 
+<% if user_signed_in? %>
+  <h2> You have successfully logged in user: <%= current_user.email %></h2>
+  <h3> Click the link below to see your posts </h3>
+  <%= link_to "View Your Posts", user_posts_path(current_user) %>
+<% else %>
 
 <form action="/users/sign_up" method="get" id="Sign up">
   <button type="submit" value="Sign up"> Sign up</button>
