@@ -6,3 +6,9 @@ def sign_up
   fill_in("Password confirmation", :with => "123456")
   click_button "Sign up"
 end
+
+def sign_up_with_sign_out
+   sign_up
+   click_link "Sign out"
+   click_button "Sign in"
+end
