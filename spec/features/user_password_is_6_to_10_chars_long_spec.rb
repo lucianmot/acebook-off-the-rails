@@ -38,10 +38,23 @@ RSpec.feature "Sign-up password", type: :feature do
     expect(current_path).to eq("/users")
     expect(page).to have_content("Password can't be blank")
   end
+
+  scenario "User password confirmation field is empty" do
+    visit "users/sign_up"
+    fill_in "user_email", with: "example@gmail.com"
+    fill_in "user_password", with: "1234567"
+    click_button "Sign up"
+    expect(current_path).to eq("/users")
+    expect(page).to have_content("Password confirmation doesn't match Password")
+  end
+
+  scenario "User password field does not match password confirmation field" do
+    visit "users/sign_up"
+    fill_in "user_email", with: "example@gmail.com"
+    fill_in "user_password", with: "1234567"
+    fill_in "user_password", with: "12345678"
+    click_button "Sign up"
+    expect(current_path).to eq("/users")
+    expect(page).to have_content("Password confirmation doesn't match Password")
+  end
 end
-# testing password that is too short - done
-# testing password that is too long - done
-# testing when password is correct length, user is signed up - done
-# tesing no password typed in - right error message received - done
-# testing the right error message when the password confirmation not filled in
-# testing not matching passwords
