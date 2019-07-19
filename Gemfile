@@ -39,6 +39,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.5'
   gem 'selenium-webdriver'
   gem 'simplecov', require: false
+  gem 'rspec-rails', '~> 3.5'
+  gem 'database_cleaner'
 end
 
 group :development do
