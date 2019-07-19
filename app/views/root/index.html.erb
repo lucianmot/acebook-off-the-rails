@@ -1,12 +1,17 @@
 <h1> Welcome to Acebook </h1>
 
-
-<form action="/users/sign_up" method="get" id="Sign up">
-  <button type="submit" value="Sign up"> Sign up</button>
-</form>
-<br>
-<form action="/users/sign_in" method="get" id="Sign in">
-  <button type="submit" value="Sign in"> Sign in</button>
-</form>
+<% if user_signed_in? %>
+  <h2> You have successfully logged in user: <%= current_user.email %></h2>
+  <h3> Click the link below to see your posts </h3>
+  <%= link_to "View Your Posts", user_posts_path(current_user) %>
+<% else %>
+  <form action="/users/sign_up" method="get" id="Sign up">
+    <button type="submit" value="Sign up"> Sign up</button>
+  </form>
+  <br>
+  <form action="/users/sign_in" method="get" id="Sign in">
+    <button type="submit" value="Sign in"> Sign in</button>
+  </form>
+<%end %>
 <br>
 <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
