@@ -1,6 +1,9 @@
 <%= form_with(model: [current_user.posts.build], local: true) do |form| %>
   <%= form.label :message %>
-  <%= form.text_field :message %>
+  <%= form.text_area :message, size: "15x3" %>
 
   <%= form.submit "Submit" %>
 <% end %>
+
+#this is a proposed solution, however it was not run on the
+#server as the other team is working on connecting the posts. 
