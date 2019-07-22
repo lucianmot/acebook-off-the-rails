@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/lucianmot/acebook-off-the-rails.svg?branch=master)](https://travis-ci.org/lucianmot/acebook-off-the-rails)
+
 # AceBook
 
 This project is a Ruby on Rails social message posting application. It is one of the Makers Academy engineering projects.
