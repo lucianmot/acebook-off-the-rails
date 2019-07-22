@@ -13,6 +13,14 @@ https://acebook-off-the-rails.herokuapp.com/
 
 ![Team Off-the-Rails](team-otr.jpg)
 
+## Usage
+
+To be described when we have a working version.
+
+## API
+
+To be described when we have a working API, if that happens.
+
 ## How to Install
 
 First, clone this repository. Then:
@@ -42,3 +50,7 @@ https://trello.com/b/voEAOwPH/off-the-rails-taskboard
 
 * Ruby on Rails - Web Application Framework
 * Devise - User Authentication
+
+## License
+
+GNU General Public License v2.0
