@@ -6,7 +6,7 @@ This project is a Ruby on Rails social message posting application. It is one of
 
 # Live Demo
 
-If you would like to view this project click the following link:
+If you would like to view this project click the following link:<br />
 https://acebook-off-the-rails.herokuapp.com/
 
 ## Meet the Team
@@ -50,7 +50,7 @@ admin$ rubycritic app app/controllers/application_controller.rb
 ```
 It takes you to the browser and displays your report:
 
-(![Image of the rubycritic report](https://user-images.githubusercontent.com/12727270/61628020-0ec01380-ac79-11e9-8a98-dda7b01adbfc.png))
+![Image of the rubycritic report](https://user-images.githubusercontent.com/12727270/61628020-0ec01380-ac79-11e9-8a98-dda7b01adbfc.png)
 
 
 ## Project Kanban Board
