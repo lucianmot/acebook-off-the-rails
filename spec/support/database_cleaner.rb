@@ -17,7 +17,7 @@ config.before(:suite) do
  end
 
  config.after(:each) do
-   DatabaseCleaner.clean
+   DatabaseCleaner.clean_with(:truncation)
  end
 
 end
