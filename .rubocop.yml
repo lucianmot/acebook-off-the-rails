@@ -1,4 +1,4 @@
- #    _____               ____ ____        __     _         __
+#    _____               ____ ____        __     _         __
 #   / ___/ _____ ____ _ / __// __/____   / /    (_)____   / /_
 #   \__ \ / ___// __ `// /_ / /_ / __ \ / /    / // __ \ / __/
 #  ___/ // /__ / /_/ // __// __// /_/ // /___ / // / / // /_
@@ -41,6 +41,7 @@
 #
 # We want to encourage testing, but it can be verbose in the early stages.
 # So we'll give you a break. As you learn, try removing the next two sections.
+require: rubocop-rails
 
 Metrics/LineLength:
   Exclude:
@@ -497,3 +498,8 @@ Style/NumericLiterals:
   Enabled: false
 Style/StderrPuts:
   Enabled: false
+
+AllCops:
+  Exclude:
+    - 'db/*'
+    - 'config/*/*'
