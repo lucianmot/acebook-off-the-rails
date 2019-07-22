@@ -41,6 +41,7 @@ group :development, :test do
   gem 'rubocop-rails'
   gem 'selenium-webdriver'
   gem 'simplecov', require: false  
+  gem 'simplecov-console'
 end
 
 group :development do
