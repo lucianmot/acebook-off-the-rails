@@ -21,4 +21,9 @@ RSpec.feature "Log out", type: :feature do
     expect(page).to have_content("You have successfully logged in user: user2@gmail.com")
   end
 
+  scenario "A user can only sign out if they are signed in" do
+    visit("/")
+    expect(page).not_to have_link("Sign out")
+  end
+
 end
