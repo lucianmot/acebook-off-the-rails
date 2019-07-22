@@ -66,3 +66,21 @@ https://trello.com/b/voEAOwPH/off-the-rails-taskboard
 ## License
 
 GNU General Public License v2.0
+
+## Completed User Stories
+
+As a User  
+So that I know I need to log in  
+I should be re-directed to the index page if I try and go to any other page when not logged in  
+
+As a User  
+So that I can sign up sucessfully  
+I get feedback when I enter invalid sign-up details
+
+As a User  
+So that I know if log-in was sucessfull  
+I get confirmation on login  
+
+As a User  
+So that I can see everything I've posted  
+I am re-directed to my list of posts after I log in  
