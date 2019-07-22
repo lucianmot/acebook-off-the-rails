@@ -1,4 +1,4 @@
-def sign_up(mail="user@gmail.com", pass="123456")
+def sign_up(mail = "user@gmail.com", pass = "123456")
   visit "/users/sign_in"
   click_link "Sign up"
   fill_in("Email", :with => mail)
@@ -8,7 +8,7 @@ def sign_up(mail="user@gmail.com", pass="123456")
 end
 
 def sign_up_with_sign_out
-   sign_up
-   click_link "Sign out"
-   click_button "Sign in"
+  sign_up
+  click_link "Sign out"
+  click_button "Sign in"
 end
