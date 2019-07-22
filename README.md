@@ -27,6 +27,13 @@ Navigate to the root of the project then run the tests from the command line
 admin$ rspec
 ```
 
+## How to analyse the complexity of the commits
+Navigate to the root of the project then run the tests from the command line
+
+```console
+admin$ rubycritic app app/controllers/application_controller.rb
+```
+
 ## Project Kanban Board
 
 https://trello.com/b/voEAOwPH/off-the-rails-taskboard
@@ -35,4 +42,4 @@ https://trello.com/b/voEAOwPH/off-the-rails-taskboard
 
 * Ruby on Rails - Web Application Framework
 * Devise - User Authentication
-
+* RubyCritic - Code Quality Analyser
