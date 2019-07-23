@@ -9,7 +9,7 @@ RSpec.feature "Use Post", type: :feature do
     expect(page).to have_content("NEW POST")
   end
 
-  scenario "User can see a New Post Form" do
+  scenario "User can create a post and see it" do
     sign_up("user@gmail.com", "123456")
     click_link "View Your Posts"
     click_link "New post"
