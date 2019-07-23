@@ -40,7 +40,8 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'rspec-rails', '~> 3.5'
   gem 'rubocop-rails'
-  gem 'selenium-webdriver'  
+  gem 'selenium-webdriver'
+  gem 'pry' 
 end
 
 group :development do
@@ -50,7 +51,7 @@ group :development do
 end
 
 group :test do
-  gem 'simplecov', require: false  
+  gem 'simplecov', require: false
   gem 'simplecov-console', require: false
 end
 
