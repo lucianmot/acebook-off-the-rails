@@ -2,8 +2,10 @@
 
 <% @posts.each do |post| %>
   <p><%= post.message %></p>
+  <%= post.created_at.strftime("%d %B %Y %H:%M") %>
 <% end %>
-
+</br>
+</br>
 <%= link_to new_user_post_path do %>
   New post
 <% end %>
