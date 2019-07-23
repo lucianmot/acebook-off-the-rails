@@ -1,7 +1,7 @@
 <h1> Your posts: </h1>
 
 <% @posts.each do |post| %>
-  <p><%= post.message %></p>
+  <p><%= simple_format post.message %></p>
 <% end %>
 
 <%= link_to new_user_post_path do %>
