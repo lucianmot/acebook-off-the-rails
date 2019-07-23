@@ -1,16 +1,16 @@
 class PostsController < ApplicationController
 
   def new
-    @post = Post.new
+    @post = current_user.posts.new
   end
 
   def create
-    @post = Post.create(post_params)
-    redirect_to posts_url
+    @post = current_user.posts.create(post_params)
+    redirect_to user_posts_path
   end
 
   def index
-    @posts = Post.all
+    @posts = current_user.posts.all
   end
 
   private
