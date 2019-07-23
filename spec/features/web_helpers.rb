@@ -12,3 +12,9 @@ def sign_up_with_sign_out
   click_link "Sign out"
   click_button "Sign in"
 end
+
+def create_a_post(message)
+  click_link "New post"
+  fill_in("post_message", with: message)
+  click_button "Submit"
+end
