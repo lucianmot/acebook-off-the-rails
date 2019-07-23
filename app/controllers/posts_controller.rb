@@ -6,7 +6,7 @@ class PostsController < ApplicationController
 
   def create
     # we need to add user information.
-    @post = Post.create(post_params)
+    @post = current_user.posts.create(post_params)
     redirect_to user_posts_path
   end
 
