@@ -6,10 +6,10 @@ require 'rails_helper'
 
 RSpec.feature "Log out", type: :feature do
   scenario "User logs in and immediately logs out with confirmation" do
-     sign_up
-     expect(page).to have_content("You have successfully logged in user: user@gmail.com")
-     click_link "Sign out"
-     expect(page).to have_content("Signed out successfully")
+    sign_up
+    expect(page).to have_content("You have successfully logged in user: user@gmail.com")
+    click_link "Sign out"
+    expect(page).to have_content("Signed out successfully")
   end
 
   scenario "When a user logs out and a new user logs in the new user becomes the current user" do

@@ -5,15 +5,12 @@ class PostsController < ApplicationController
   end
 
   def create
-    # we need to add user information.
     @post = current_user.posts.create(post_params)
     redirect_to user_posts_path
   end
 
   def index
-    # @posts = Post.where(user_id: current_user.id)
     @posts = current_user.posts.all
-    p @posts
   end
 
   private
