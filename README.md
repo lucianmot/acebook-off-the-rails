@@ -74,13 +74,17 @@ So that I know I need to log in
 I should be re-directed to the index page if I try and go to any other page when not logged in  
 
 As a User  
-So that I can sign up sucessfully  
+So that I can sign up successfully  
 I get feedback when I enter invalid sign-up details
 
 As a User  
-So that I know if log-in was sucessfull  
+So that I know if log-in was successful  
 I get confirmation on login  
 
 As a User  
 So that I can see everything I've posted  
 I am re-directed to my list of posts after I log in  
+
+As a User  
+So that I can reflect on my really important life
+I can make a post and see it
