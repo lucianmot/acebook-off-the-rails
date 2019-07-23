@@ -1,5 +1,5 @@
 <h1>NEW POST</h1>
-<%= form_for [@user, @post] do |form| %>
+<%= form_for [current_user, @post] do |form| %>
   <%= form.label :message %>
   <%= form.text_field :message %>
 
