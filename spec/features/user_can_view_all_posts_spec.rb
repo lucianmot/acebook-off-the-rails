@@ -33,7 +33,17 @@ RSpec.feature "View all posts", type: :feature do
     click_link "View All Posts"
     expect(page).to have_content("I am user 1")
     expect(page).to have_content("I am user 2")
+  end
 
+  scenario "User can navigate back to their personal post page after viewing all posts" do
+    sign_up
+    click_link "View Your Posts"
+    click_link "New post"
+    fill_in("post_message", with: "Hello")
+    click_button "Submit"
+    click_link "View All Posts"
+    click_link "View Your Posts"
+    expect(current_path).to eq("/users/1/posts")
   end
 
 end

@@ -5,3 +5,5 @@
   <%= post.created_at.strftime("%d %B %Y %H:%M") %>
   <br>
 <% end %>
+<br>
+<%= link_to "View Your Posts", user_posts_path(current_user) %>
