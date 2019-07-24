@@ -38,4 +38,12 @@ RSpec.feature "View all posts", type: :feature do
     expect(current_path).to eq("/users/1/posts")
   end
 
+  scenario "User can see the post creators email next to the post" do
+    sign_up("user@gmail.com")
+    click_link "View Your Posts"
+    create_a_post("I am user 1")
+    click_link "View All Posts"
+    expect(page).to have_content("user@gmail.com")
+  end
+
 end
