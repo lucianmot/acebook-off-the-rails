@@ -23,6 +23,10 @@ class PostsController < ApplicationController
     @posts = current_user.posts.all.order('created_at DESC')
   end
 
+  def display_all
+    @all_posts = Post.all.order('created_at DESC')
+  end
+
   private
 
   def post_params

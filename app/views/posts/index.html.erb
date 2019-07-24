@@ -7,6 +7,8 @@
 <% end %>
 </br>
 </br>
-<%= link_to new_user_post_path do %>
-  New post
-<% end %>
+<%= link_to "View All Posts", posts_path %>
+<br>
+<%= link_to "New post", new_user_post_path %>
+<br>
+<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>

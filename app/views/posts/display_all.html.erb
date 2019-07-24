@@ -1,0 +1,9 @@
+<h1> Acebook Wall </h1>
+
+<% @all_posts.each do |post| %>
+  <p><%= simple_format post.message %></p>
+  <%= post.created_at.strftime("%d %B %Y %H:%M") %>
+  <br>
+<% end %>
+<br>
+<%= link_to "View Your Posts", user_posts_path(current_user) %>
