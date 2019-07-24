@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   end
   # setup for devise we should update this when we have a user#index
   root "root#index"
+
+  get 'posts', to: 'posts#display_all'
 end
