@@ -25,10 +25,10 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
-    if @post.update_attributes(:message => (params[:post][:message]))
-    redirect_to user_posts_path
+    if @post.update(:message => (params[:post][:message]))
+      redirect_to user_posts_path
     else
-    render 'edit'
+      render 'edit'
     end
   end
 
