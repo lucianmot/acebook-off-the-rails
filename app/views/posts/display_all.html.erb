@@ -4,6 +4,8 @@
   <p><%= simple_format post.message %></p>
   <%= post.created_at.strftime("%d %B %Y %H:%M") %>
   <br>
+  <% @desired_user= User.where(id:post.user_id)%>
+  <%= p @desired_user[0].email%>
 <% end %>
 <br>
 <%= link_to "View Your Posts", user_posts_path(current_user) %>
