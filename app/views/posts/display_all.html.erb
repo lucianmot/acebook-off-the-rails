@@ -1,11 +1,10 @@
 <h1> Acebook Wall </h1>
 
-<% @all_posts.each do |post| %>
-  <h3><%= simple_format post.message %></h3>
-  <%= post.created_at.strftime("%d %B %Y %H:%M") %>
+<% @formatted_posts.each do |post| %>
+  <h3><%= simple_format post[0] %></h3>
+  <%= post[1] %>
   <br>
-  <% @desired_user= User.where(id:post.user_id)%>
-  <%= @desired_user[0].email%>
+  <%= post[2] %>
   <br>
   <br>
 <% end %>
