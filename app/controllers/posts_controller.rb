@@ -24,27 +24,12 @@ class PostsController < ApplicationController
   end
 
   def display_all
-    @all_posts = Post.all.order('created_at DESC')
-    @formatted_posts = []
-    @all_posts.as_json.each do |post|
-      formatted_post = [
-                        post["message"],
-                        post["created_at"].strftime("%d %B %Y %H:%M"),
-                        find_user(post["user_id"])
-                        ]
-
-      @formatted_posts << formatted_post
-    end
+    @posts = Post.all.order('created_at DESC')
   end
 
   private
 
   def post_params
     params.require(:post).permit(:message)
-  end
-
-  def find_user(user_id)
-    @user = User.where(id: user_id)
-    @user[0].email
   end
 end
