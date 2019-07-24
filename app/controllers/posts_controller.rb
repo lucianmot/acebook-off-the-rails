@@ -19,6 +19,10 @@ class PostsController < ApplicationController
     redirect_to user_posts_path
   end
 
+  def edit
+    
+  end
+
   def index
     @posts = current_user.posts.all.order('created_at DESC')
   end
