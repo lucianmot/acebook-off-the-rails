@@ -6,6 +6,7 @@
   <br>
   <%= post.user_email %>
   <br>
+  <%= link_to "Show", user_post_path(current_user, post) %>
 <% end %>
 <br>
 <%= link_to "View Your Posts", user_posts_path(current_user) %>

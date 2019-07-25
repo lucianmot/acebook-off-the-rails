@@ -8,8 +8,9 @@ RSpec.feature "Show Post", type: :feature do
     click_link "View All Posts"
     expect(current_path).to eq("/posts")
     expect(page).to have_content("Hello")
-    click_button "Show"
-    expect(current_path).to eq("/post/1")
+    click_link "Show"
+    expect(current_path).to eq("/users/1/posts/1")
     expect(page).to have_content("Hello")
+    expect(page).to have_link("All Posts")
   end
 end
