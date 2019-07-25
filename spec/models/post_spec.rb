@@ -9,6 +9,9 @@ RSpec.describe Post, type: :model do
   end
 
   it "Returns the formatted date and time a post is created" do
-    
+    user = User.new(email: "user@gmail.com", id: 1)
+    post = user.posts.new(message: "Hello", user_id: 1, created_at: "2019-07-24 11:38:05.223399")
+
+    expect(post.formatted_date_time).to eq "24 July 2019 11:38"
   end
 end
