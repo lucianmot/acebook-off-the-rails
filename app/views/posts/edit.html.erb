@@ -1,6 +1,23 @@
-<h1>UPDATE POST</h1>
-<%= form_for [current_user, @post] do |form| %>
-  <%= form.label :message %>
-  <%= form.text_area :message, size: "15x3", :value => @post.message %>
-  <%= form.submit "Submit" %>
+
+
+<%= @ten_mins_in_seconds = 600 %>
+<%= @post_creation_time = @post.created_at%>
+<%= created_at_time_plus_10mins = @post_creation_time + @ten_mins_in_seconds %>
+<%= Time.now %>
+
+
+
+<% if Time.now > created_at_time_plus_10mins %>
+  It's too late...
+  <%= Time.now %>
+  <%= created_at_time_plus_10mins %>
+  <%= flash.now[:error] = "You can no longer update this post" %>
+  <%= link_to "View Your Posts", user_posts_path(current_user) %>
+<% else %>
+  <h1>UPDATE POST</h1>
+  <%= form_for [current_user, @post] do |form| %>
+    <%= form.label :message %>
+    <%= form.text_area :message, size: "15x3", :value => @post.message %>
+    <%= form.submit "Submit" %>
+  <% end %>
 <% end %>
