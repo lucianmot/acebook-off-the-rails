@@ -1,11 +1,8 @@
 
 
-<%= @ten_mins_in_seconds = 600 %>
-<%= @post_creation_time = @post.created_at%>
-<%= created_at_time_plus_10mins = @post_creation_time + @ten_mins_in_seconds %>
-<%= Time.now %>
-
-
+<% @ten_mins_in_seconds = 600 %>
+<% @post_creation_time = @post.created_at%>
+<% created_at_time_plus_10mins = @post_creation_time + @ten_mins_in_seconds %>
 
 <% if Time.now > created_at_time_plus_10mins %>
   It's too late...
