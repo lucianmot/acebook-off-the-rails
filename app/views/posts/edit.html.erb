@@ -5,10 +5,8 @@
 <% created_at_time_plus_10mins = @post_creation_time + @ten_mins_in_seconds %>
 
 <% if Time.now > created_at_time_plus_10mins %>
-  It's too late...
-  <%= Time.now %>
-  <%= created_at_time_plus_10mins %>
   <%= flash.now[:error] = "You can no longer update this post" %>
+  <br>
   <%= link_to "View Your Posts", user_posts_path(current_user) %>
 <% else %>
   <h1>UPDATE POST</h1>
