@@ -4,6 +4,7 @@
   <p><%= simple_format post.message %></p>
   <%= post.formatted_date_time %>
   <p><%= link_to 'Delete', [current_user, post], :method => :delete  %></p>
+  <%= link_to "Edit", edit_user_post_path(current_user, post) %>
 <% end %>
 </br>
 </br>
