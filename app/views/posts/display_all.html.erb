@@ -6,6 +6,10 @@
   <br>
   <%= post.email %>
   <br>
+  <% if current_user.id == post.user_id %>
+    <p><%= link_to 'Delete', [current_user, post], :method => :delete  %></p>
+    <p><%= link_to "Edit", edit_user_post_path(current_user, post) %></p>
+  <% end %>
 <% end %>
 <br>
 <%= link_to "View Your Posts", user_posts_path(current_user) %>
