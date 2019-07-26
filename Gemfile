@@ -9,6 +9,7 @@ end
 # gem 'bcrypt', '~> 3.1.7'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'bulma-rails'
 # Creates user login and sign up
 gem 'devise'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder

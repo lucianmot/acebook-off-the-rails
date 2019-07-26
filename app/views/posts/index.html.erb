@@ -1,11 +1,16 @@
 <h1> Your posts: </h1>
-
-<% @posts.each do |post| %>
-  <p><%= simple_format post.message %></p>
-  <%= post.formatted_date_time %>
-  <p><%= link_to 'Delete', [current_user, post], :method => :delete  %></p>
-  <p><%= link_to "Edit", edit_user_post_path(current_user, post) %></p>
-<% end %>
+      
+  <% @posts.each do |post| %>
+    <div class="container">
+      <div class="notification">
+        <p class="title"><%= simple_format post.message %></p>
+        <p class="subtitle"><%= post.formatted_date_time %></p>
+        <p><%= link_to 'Delete', [current_user, post], :method => :delete  %></p>
+        <p><%= link_to "Edit", edit_user_post_path(current_user, post) %></p>
+      </div>
+    </div>          
+  <% end %>           
+      
 </br>
 </br>
 <%= link_to "View All Posts", posts_path %>

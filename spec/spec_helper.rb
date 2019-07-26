@@ -1,6 +1,7 @@
 require 'simplecov'
 require 'simplecov-console'
 require 'features/web_helpers'
+require 'bulma-rails'
 
 SimpleCov.start 'rails' do
   add_filter '/bin/'
