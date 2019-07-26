@@ -11,11 +11,11 @@
         <%= post.formatted_date_time %>
         </span>
         <span class="rails-right">
-        <%= link_to('Show', user_post_path(current_user, post), :class => "button is-dark is-outlined") %>
+         <%= link_to('Show', user_post_path(current_user, post), :class => "button is-dark is-outlined") %>
         <% if current_user.id == post.user_id %>
           <%= link_to('Delete', [current_user, post], :method => :delete, :class => "button is-dark is-outlined") %>
           <%= link_to('Edit', edit_user_post_path(current_user, post), :class => "button is-dark is-outlined") %>
-        <% end %>
+        <% end %> #>
         </span>
     </div>
   </div>
