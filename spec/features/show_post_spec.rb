@@ -11,6 +11,6 @@ RSpec.feature "Show Post", type: :feature do
     click_link "Show"
     expect(current_path).to eq("/users/1/posts/1")
     expect(page).to have_content("Hello")
-    expect(page).to have_link("All Posts")
+    expect(page).to have_link("Back to All Posts")
   end
 end
