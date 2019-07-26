@@ -1,11 +1,11 @@
-<div class="display">
-  <div id="title">
+  <div class="title">
     <h1> Acebook Wall</h1>
   </div>
 
   <% @posts.each do |post| %>
     <div class="post">
       <div class="container">
+      <div class="notification">
       <h3><%= simple_format post.message %></h3>
       <span class="in-line-block">
       <%= post.email %>
@@ -23,6 +23,4 @@
   </div>
 </div>
   <% end %>
-  <br>
-  <%= link_to "View Your Posts", user_posts_path(current_user) %>
 </div>
