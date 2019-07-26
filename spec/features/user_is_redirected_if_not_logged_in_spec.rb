@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.feature "User Authentication", type: :feature do
-  scenario "User is redirected if not logged in" do
+RSpec.feature "When the User isn't logged in", type: :feature do
+  scenario "they should be redirected if they try to go to a page" do
     visit "users/1/posts"
     expect(page).to have_content("Log in")
   end

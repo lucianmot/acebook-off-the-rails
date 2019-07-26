@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.feature "Delete a post", type: :feature do
-  scenario "when you click on delete, post is removed from your page" do
+RSpec.feature "When the User deletes a Post", type: :feature do
+  scenario "they should not see it in their Posts page" do
     sign_up
     click_link "View Your Posts"
     create_a_post("I love monsieur Travis")

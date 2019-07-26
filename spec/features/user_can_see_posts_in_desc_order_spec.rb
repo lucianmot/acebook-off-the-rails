@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.feature "User posts", type: :feature do
-  scenario "are in descending order - newest first" do
+RSpec.feature "When the User views their posts", type: :feature do
+  scenario "they should be in descending order - newest first" do
     sign_up("user@gmail.com", "123456")
     click_link "View Your Posts"
     

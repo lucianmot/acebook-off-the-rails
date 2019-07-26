@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.feature "Show Post", type: :feature do
-  scenario "User can see full text of the single post" do
+RSpec.feature "When the user clicks on show post", type: :feature do
+  scenario "they should see full text of the single post" do
     sign_up
     click_link "View Your Posts"
     create_a_post("Hello")

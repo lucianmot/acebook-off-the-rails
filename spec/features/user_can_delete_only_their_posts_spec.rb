@@ -1,8 +1,8 @@
 require 'rails_helper'
 require 'pry'
 
-RSpec.feature "Delete & edit only my posts", type: :feature do
-  scenario "user only sees edit & delete links for their posts" do
+RSpec.feature "When the User deletes & edits their Posts", type: :feature do
+  scenario "they should only sees edit & delete links for their posts" do
     # User 1 - sign in, create a post, sign out
     sign_up("user1@gmail.com", "123456")
     click_link "View Your Posts"
