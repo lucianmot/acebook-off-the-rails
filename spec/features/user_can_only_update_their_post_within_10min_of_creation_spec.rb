@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.feature "Update my posts", type: :feature do
+RSpec.feature "When a User wants to update posts", type: :feature do
 
-  scenario "User tries to update post more than 10 mins after creation" do
+  scenario "they should not be able to update Posts more than 10 mins after creation" do
     sign_up
     click_link "View Your Posts"
     create_a_post("Hello")
@@ -15,7 +15,7 @@ RSpec.feature "Update my posts", type: :feature do
     expect(page).to have_content("You can no longer update this post")
   end
 
-  scenario "User tries to update post less than 10 mins after creation" do
+  scenario "they should be able to update Post less than 10 mins after creation" do
     sign_up
     click_link "View Your Posts"
     create_a_post("Hello")

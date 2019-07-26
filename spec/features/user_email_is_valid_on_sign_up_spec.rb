@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.feature "Sign-up email", type: :feature do
-  scenario "User email has correct format" do
+RSpec.feature "When the User wants to sign-up", type: :feature do
+  scenario "they should know that the email has correct format" do
     visit "/users/sign_up"
     fill_in "user_email", with: "example"
     fill_in "user_password", with: "1234567"
@@ -11,7 +11,7 @@ RSpec.feature "Sign-up email", type: :feature do
     expect(page).to_not have_content("Welcome! You have signed up successfully.")
   end
 
-  scenario "User email is unique" do
+  scenario "they should know that the email is unique" do
     sign_up("user@gmail.com", "123456")
     click_link "Sign out"
     click_button "Sign up"
@@ -23,7 +23,7 @@ RSpec.feature "Sign-up email", type: :feature do
     expect(page).to have_content("Email has already been taken")
   end
 
-  scenario "User email is blank but password and password confirmation match" do
+  scenario "they should get an error if email is blank but password and password confirmation match" do
     visit "/users/sign_up"
     fill_in "user_email", with: ""
     fill_in "user_password", with: "1234567"
@@ -33,7 +33,7 @@ RSpec.feature "Sign-up email", type: :feature do
     expect(page).to have_content("Email can't be blank")
   end
 
-  scenario "User email, password and password confirmation are blank" do
+  scenario "they should get an error if User email, password and password confirmation are blank" do
     visit "/users/sign_up"
     fill_in "user_email", with: ""
     fill_in "user_password", with: ""
@@ -44,7 +44,7 @@ RSpec.feature "Sign-up email", type: :feature do
     expect(page).to have_content("Password can't be blank")
   end
 
-  scenario "User email is blank and password and password confirmation do not match" do
+  scenario "they should get an error if User email is blank and password and password confirmation do not match" do
     visit "/users/sign_up"
     fill_in "user_email", with: ""
     fill_in "user_password", with: "1234567"

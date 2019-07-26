@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.feature "User posts", type: :feature do
-  scenario "have correct formatting" do
+RSpec.feature "When the User views a post", type: :feature do
+  scenario "they should see the correct date format and Post message" do
     sign_up("user@gmail.com", "123456")
     click_link "View Your Posts"
     click_link "New post"

@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-RSpec.feature "Edit a post", type: :feature do
-  scenario "when I click edit, I can change the body of a post" do
+RSpec.feature "When a User edits a Post", type: :feature do
+  scenario "they should be able to change the body of a Post" do
     sign_up
     click_link "View Your Posts"
     create_a_post("I love monsieur Travis")
