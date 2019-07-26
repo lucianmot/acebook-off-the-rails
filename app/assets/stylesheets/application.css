@@ -49,3 +49,12 @@ h1 {
 
 .links {
 }
+
+.rails-right {
+  float: right;
+}
+
+.rails-center {
+  padding-left: 30%;   
+  text-align: center;
+}
