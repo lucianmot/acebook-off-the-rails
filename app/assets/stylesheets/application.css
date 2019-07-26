@@ -35,19 +35,13 @@ h1 {
   font-size: 3rem;
 }
 
-.display {
+.title {
+  padding-top: 20px;
+  text-align: center;
 }
 
-.post {
-}
-
-.user-name {
-}
-
-.current-date {
-}
-
-.links {
+.container {
+  margin-bottom: 40px;
 }
 
 .rails-right {
@@ -55,6 +49,10 @@ h1 {
 }
 
 .rails-center {
-  padding-left: 30%;   
+  padding-left: 30%;
   text-align: center;
+}
+
+.another-center {
+    text-align: center;
 }
