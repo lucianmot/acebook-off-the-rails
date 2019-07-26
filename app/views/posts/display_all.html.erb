@@ -1,16 +1,26 @@
-<h1> Acebook Wall </h1>
+  <div class="title">
+    <h1> Acebook Wall</h1>
+  </div>
 
-<% @posts.each do |post| %>
-  <h3><%= simple_format post.message %></h3>
-  <%= post.formatted_date_time %>
-  <br>
-  <%= post.email %>
-  <br>
-  <%= link_to "Show", user_post_path(current_user, post) %>
-  <% if current_user.id == post.user_id %>
-    <p><%= link_to 'Delete', [current_user, post], :method => :delete  %></p>
-    <p><%= link_to "Edit", edit_user_post_path(current_user, post) %></p>
+  <% @posts.each do |post| %>
+    <div class="post">
+      <div class="container">
+      <div class="notification">
+      <h3><%= simple_format post.message %></h3>
+      <span class="in-line-block">
+      <%= post.email %>
+      <span class="rails-center">
+      <%= post.formatted_date_time %>
+      </span>
+      <span class="rails-right">
+      <%= link_to('Show', user_post_path(current_user, post), :class => "button is-dark is-outlined") %>
+      <% if current_user.id == post.user_id %>
+        <%= link_to('Delete', [current_user, post], :method => :delete, :class => "button is-dark is-outlined") %>
+        <%= link_to('Edit', edit_user_post_path(current_user, post), :class => "button is-dark is-outlined") %>
+      <% end %>
+      </span>
+      </span>
+  </div>
+</div>
   <% end %>
-<% end %>
-<br>
-<%= link_to "View Your Posts", user_posts_path(current_user) %>
+</div>

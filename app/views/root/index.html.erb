@@ -4,11 +4,7 @@
   <h2> You have successfully logged in user: <%= current_user.email %></h2>
   <h3> Click the link below to see your posts </h3>
   <br>
-  <%= link_to "View Your Posts", user_posts_path(current_user) %>
-  <br>
-  <%= link_to "View All Posts", posts_path %>
-  <br>
-  <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+  
 <% else %>
   <form action="/users/sign_up" method="get" id="Sign up">
     <button type="submit" value="Sign up"> Sign up</button>

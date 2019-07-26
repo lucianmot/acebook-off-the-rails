@@ -1,15 +1,23 @@
-<h1> Your posts: </h1>
+  <div class="title">
+    <h1> Your posts: </h1>
+  </div>
 
-<% @posts.each do |post| %>
-  <p><%= simple_format post.message %></p>
-  <%= post.formatted_date_time %>
-  <p><%= link_to 'Delete', [current_user, post], :method => :delete  %></p>
-  <p><%= link_to "Edit", edit_user_post_path(current_user, post) %></p>
-<% end %>
-</br>
-</br>
-<%= link_to "View All Posts", posts_path %>
-<br>
-<%= link_to "New post", new_user_post_path %>
-<br>
-<%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+  <% @posts.each do |post| %>
+    <div class="post">
+      <div class="container">
+        <div class="notification">
+        <h3><%= simple_format post.message %></h3>
+        <span class="rails-center">
+        <%= post.formatted_date_time %>
+        </span>
+        <span class="rails-right">
+         <%= link_to('Show', user_post_path(current_user, post), :class => "button is-dark is-outlined") %>
+        <% if current_user.id == post.user_id %>
+          <%= link_to('Delete', [current_user, post], :method => :delete, :class => "button is-dark is-outlined") %>
+          <%= link_to('Edit', edit_user_post_path(current_user, post), :class => "button is-dark is-outlined") %>
+        <% end %> #>
+        </span>
+    </div>
+  </div>
+    <% end %>
+  </div>

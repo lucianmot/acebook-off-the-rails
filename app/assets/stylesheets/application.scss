@@ -13,3 +13,47 @@
  *= require_tree .
  *= require_self
  */
+@import 'bulma';
+@import 'bulma-extensions';
+
+html,
+body {
+  background-color: #ff6f69;
+}
+
+header {
+  background-color: #ffcc5c;
+  font-size: 5rem;
+  font-weight: bold;
+}
+p {
+  color: black;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+.title {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.container {
+  margin-bottom: 40px;
+}
+
+.rails-right {
+  float: right;
+}
+
+.rails-center {
+  padding-left: 30%;
+  text-align: center;
+}
+
+.another-center {
+    text-align: center;
+}
