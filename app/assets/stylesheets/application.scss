@@ -14,6 +14,7 @@
  *= require_self
  */
 @import 'bulma';
+@import 'bulma-extensions';
 
 html,
 body {
@@ -55,6 +56,6 @@ h1 {
 }
 
 .rails-center {
-  padding-left: 30%;   
+  padding-left: 30%;
   text-align: center;
 }
