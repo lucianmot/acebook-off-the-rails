@@ -9,7 +9,7 @@ RSpec.feature "When a User wants to update posts", type: :feature do
 
     post_creation_date = Post.find(1).created_at
     eleven_mins_in_seconds = 660
-    allow(Time).to receive(:now) {post_creation_date + eleven_mins_in_seconds}
+    allow(Time).to receive(:now) { post_creation_date + eleven_mins_in_seconds }
 
     click_link "Edit"
     expect(page).to have_content("You can no longer update this post")
